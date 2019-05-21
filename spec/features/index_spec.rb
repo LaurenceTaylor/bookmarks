@@ -18,3 +18,11 @@ feature 'homepage' do
     expect(page).to have_content('http://amazon.co.uk')
   end
 end
+
+feature 'adding a link' do
+  scenario 'user can click button to add a link' do
+    visit '/bookmarks'
+    click_button 'Add link'
+    expect(page).to have_css('input[type="text"]')
+  end
+end

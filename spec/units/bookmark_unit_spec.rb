@@ -13,4 +13,12 @@ describe Bookmark do
                                   "http://amazon.co.uk"])
     end
   end
+
+  describe '#create' do
+    it 'should add a bookmark to the database' do
+      connection = PG.connect(dbname: 'bookmark_manager_test')
+      Bookmark.create('http://tfl.org.uk')
+      expect(Bookmark.all).to eq(['http://tfl.org.uk'])
+    end
+  end
 end

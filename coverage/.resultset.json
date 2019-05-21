@@ -1,6 +1,11 @@
 {
   "RSpec": {
     "coverage": {
+      "/Users/student/Projects/bookmarks/spec/features/add_spec.rb": [
+        null,
+        null,
+        null
+      ],
       "/Users/student/Projects/bookmarks/spec/features/index_spec.rb": [
         1,
         1,
@@ -17,6 +22,14 @@
         null,
         1,
         null,
+        1,
+        1,
+        1,
+        null,
+        null,
+        null,
+        1,
+        1,
         1,
         1,
         1,
@@ -39,9 +52,17 @@
         null,
         null,
         null,
+        null,
+        1,
+        1,
+        1,
+        1,
+        1,
+        null,
+        null,
         null
       ]
     },
-    "timestamp": 1558452910
+    "timestamp": 1558455796
   }
 }
