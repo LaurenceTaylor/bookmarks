@@ -33,7 +33,7 @@ $ psql
 ```
 CREATE DATABASE bookmark_manager
 ```
-3. Connect to the database using the pqsl command 
+3. Connect to the database using the pqsl command
 
 ```
 \c bookmark_manager
@@ -44,6 +44,19 @@ CREATE DATABASE bookmark_manager
 ```
 CREATE TABLE bookmarks(id SERIAL PRIMARY KEY, url VARCHAR(60));
 ```
+
+5. To create the test database run
+
+```
+CREATE DATABASE "bookmark_manager_test";
+```
+
+6. To create the bookmarks table within this database run
+
+```
+CREATE TABLE bookmarks(id SERIAL PRIMARY KEY, url VARCHAR(60));
+```
+
 ### To run the Bookmark Manager app:
 
 ```
@@ -58,7 +71,7 @@ $ shotgun
 $ rspec
 ```
 
-### To run linting:	
+### To run linting:
 
 ```
 rubocop

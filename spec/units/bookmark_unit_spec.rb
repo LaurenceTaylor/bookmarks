@@ -1,13 +1,16 @@
 require 'bookmark'
 
 describe Bookmark do
-  
-  it 'responds to .all method' do
-    expect(Bookmark).to respond_to(:all)
-  end
+  describe '#all' do
+    it 'should contain an array of URLs' do
+      connection = PG.connect(dbname: 'bookmark_manager_test')
+      connection.exec("INSERT INTO bookmarks (url) VALUES('http://google.co.uk');")
+      connection.exec("INSERT INTO bookmarks (url) VALUES('http://makersacademy.com');")
+      connection.exec("INSERT INTO bookmarks (url) VALUES('http://amazon.co.uk');")
 
-  it 'contains an array of URLs' do
-    expect(Bookmark.all).to include("http://google.co.uk")
+      expect(Bookmark.all).to eq(["http://google.co.uk",
+                                  "http://makersacademy.com",
+                                  "http://amazon.co.uk"])
+    end
   end
-
 end
