@@ -1,15 +1,7 @@
 require 'pg'
 
 class Bookmark
-  # con = PG.connect :dbname => 'bookmark_manager'
-  # @rs = con.exec "SELECT * FROM bookmarks"
-
   def self.all
-    # bookmarks = []
-    # @rs.each do |row|
-    #   bookmarks << "%s" % [row['url']]
-    # end
-    # bookmarks
     if ENV['ENVIRONMENT'] == 'test'
       connection = PG.connect(dbname: 'bookmark_manager_test')
     else
